@@ -13,22 +13,20 @@ You may assume that each input would have exactly one solution, and you may not 
 	return [0, 1].*/
 			
 	public int[] twoSum(int[] nums, int target) {
-		int l = nums.length;
-		int x = 0;
-		int y = 1;
-		
-		Mark: for(int x_r = x ; x_r<l; x_r++) {
-			for (int y_r = y ; y_r<l; y_r++) {
-				if(x_r+y_r==target){
-					x = x_r;
-					y = y_r;
-					break Mark;//Ìø×ªÓïÑÔ±ê¼Ç
+        int l = nums.length;
+		int[] result = new int[2];
+		Mark: for(int x = 0 ; x<l; x++) {
+			for(int y = x+1 ; y<l; y++) {
+				System.out.printf("%d, %d, %d%n", x, y, nums[x]+nums[y]);
+				if(nums[x]+nums[y]==target){
+					result[0] = x;
+                    result[1] = y;
+                    break Mark;
 				}
 			}
 		}
-		int[] result = {x, y};
-		return result;
-	}
+        return result;
+    }
 	
 	public static void main(String[] args) {
 		int[] nums = {3, 5, 9, 0, 2, 7, 11, 15};
