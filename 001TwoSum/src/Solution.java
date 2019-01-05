@@ -17,7 +17,6 @@ You may assume that each input would have exactly one solution, and you may not 
 		int[] result = new int[2];
 		Mark: for(int x = 0 ; x<l; x++) {
 			for(int y = x+1 ; y<l; y++) {
-				System.out.printf("%d, %d, %d%n", x, y, nums[x]+nums[y]);
 				if(nums[x]+nums[y]==target){
 					result[0] = x;
                     result[1] = y;
