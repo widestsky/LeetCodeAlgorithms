@@ -1,0 +1,16 @@
+
+public class Solution {
+//	Given a 32-bit signed integer, reverse digits of an integer.
+	public int reverse(int num) {
+        int n = num;
+		return n%10;
+    }
+	
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		int num = 123;
+		int result = sol.reverse(num);
+		System.out.printf("%d", result);
+	}
+
+}

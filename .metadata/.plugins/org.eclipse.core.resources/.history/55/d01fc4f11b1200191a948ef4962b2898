@@ -1,0 +1,13 @@
+
+public class Solution {
+//	Given a 32-bit signed integer, reverse digits of an integer.
+	public int reverse(int x) {
+        
+    }
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

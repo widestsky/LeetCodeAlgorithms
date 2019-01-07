@@ -1,0 +1,33 @@
+import java.util.Arrays;
+
+
+public class Solution {
+//	Given a 32-bit signed integer, reverse digits of an integer.
+	public int reverse(int num) {
+        int n = num;
+        int len = 9;//point to the highest unit of 10 digit integer
+        int[] units = new int[10];//32 bit signed integer has 10 digits maximum
+        while(n>0){
+        	units[len]=n%10;
+        	len = len-1;
+        	n = n/10;
+        }
+        int maxUnit = 9 - len;
+        System.out.printf("%d %d", len, maxUnit);
+        int[] rUnits = new int[maxUnit];
+        for(int i = maxUnit-1; i<0; i--){
+        	System.out.printf("%d", i);
+        	rUnits[i]=i;
+        }
+        System.out.print(Arrays.toString(rUnits));
+		return n;
+    }
+	
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		int num = 123;
+		int result = sol.reverse(num);
+		System.out.printf("%d", result);
+	}
+
+}
